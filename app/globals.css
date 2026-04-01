@@ -41,9 +41,18 @@ p {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--white); }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
 
 /* ===== HERO ===== */
 .hero {
@@ -83,6 +92,7 @@ p {
   background: var(--black);
   opacity: 0.1;
 }
+
 .line-1 {
   width: 120px;
   height: 1px;
@@ -90,6 +100,7 @@ p {
   left: 28%;
   transform: rotate(-35deg);
 }
+
 .line-2 {
   width: 80px;
   height: 2px;
@@ -307,8 +318,13 @@ p {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .category-item-group {
@@ -507,8 +523,15 @@ section:not(.hero) {
 }
 
 @keyframes pulseArrow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 .services-grid {
@@ -645,8 +668,13 @@ section:not(.hero) {
 }
 
 @keyframes slowSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .exp-icon-stripes {
@@ -659,8 +687,15 @@ section:not(.hero) {
 }
 
 @keyframes floatStripes {
-  0%, 100% { transform: rotate(5deg) translateY(0); }
-  50% { transform: rotate(5deg) translateY(-10px); }
+
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(5deg) translateY(-10px);
+  }
 }
 
 .exp-header {
@@ -926,8 +961,15 @@ section:not(.hero) {
 }
 
 @keyframes squiggleMove {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(8px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
 }
 
 .feedback-nav {
@@ -1324,8 +1366,15 @@ select.form-input option {
 }
 
 @keyframes squiggleHover {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(-3px) rotate(5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-3px) rotate(5deg);
+  }
 }
 
 .form-note {
@@ -1491,6 +1540,7 @@ select.form-input option {
   width: 0;
   transition: width 0.3s;
 }
+
 .nav-link:hover::after {
   width: 100%;
 }
@@ -1501,6 +1551,7 @@ select.form-input option {
   transform: translateY(40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
+
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);

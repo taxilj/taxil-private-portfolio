@@ -52,7 +52,7 @@ export default function Hero() {
           <a href="#contact" className="btn-primary">
             Let's Talk
           </a>
-          <a href="/projects/resume.pdf" download className="btn-download">
+          <a href="/resume.pdf" download className="btn-download">
             Download CV ↓
           </a>
         </div>
