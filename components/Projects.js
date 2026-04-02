@@ -39,13 +39,13 @@ const projects = [
 export default function Projects() {
   return (
     <section className="case-study" id="work">
-      <div className="cs-header">
+      <div className="cs-header reveal-up" data-reveal="" data-delay="0">
         <h2 className="section-title">PROJECTS</h2>
       </div>
 
       <div className="cs-list">
         {projects.map((p, i) => (
-          <div key={i} className={`cs-row ${i % 2 === 1 ? 'reverse' : ''}`}>
+          <div key={i} className={`cs-row ${i % 2 === 1 ? 'reverse' : ''} reveal-project`} data-reveal="" data-delay={String(i * 150)}>
             <div className="cs-image-wrap">
               <div className="cs-image-container">
                 <img

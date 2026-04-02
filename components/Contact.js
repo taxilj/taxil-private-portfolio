@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <div className="contact-header">
+      <div className="contact-header reveal-up" data-reveal="" data-delay="0">
         <h2 className="contact-title">
           <span className="text-outline">Say Hi!</span> and tell me about
           <span className="contact-arrow-wrap">
@@ -35,7 +35,7 @@ export default function Contact() {
         <p className="contact-subtitle">Have a nice works? reach out and let&apos;s chat.</p>
       </div>
 
-      <form className="contact-form" onSubmit={handleSubmit} aria-label="Contact form">
+      <form className="contact-form reveal-up" data-reveal="" data-delay="200" onSubmit={handleSubmit} aria-label="Contact form">
         <div className="form-row">
           <div className="form-group">
             <label className="form-label">Name.*</label>
@@ -55,11 +55,13 @@ export default function Contact() {
         <div className="form-group full">
           <label className="form-label">What&apos;s in your mind?*</label>
           <div className="chip-list">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <button
                 key={s}
                 type="button"
-                className={`chip ${form.service === s ? 'active' : ''}`}
+                className={`chip ${form.service === s ? 'active' : ''} reveal-chip`}
+                data-reveal=""
+                data-delay={String(i * 100)}
                 onClick={() => setForm({ ...form, service: s })}
               >
                 {s}

@@ -16,7 +16,7 @@ export default function Education() {
 
   return (
     <section className="experience" id="education">
-      <div className="exp-header">
+      <div className="exp-header reveal-up" data-reveal="" data-delay="0">
         <h2 className="section-title">EDUCATION</h2>
         <p className="section-desc">
           Academic background and qualifications supporting my technical expertise.
@@ -25,7 +25,7 @@ export default function Education() {
 
       <div className="exp-list">
         {education.map((edu, i) => (
-          <div key={i} className={`exp-item ${i === 0 ? 'active' : ''}`}>
+          <div key={i} className={`exp-item ${i === 0 ? 'active' : ''} reveal-left-item`} data-reveal="" data-delay={String(i * 200)}>
             <div className="exp-left">
               <div className="exp-num-box">
                 <span>{edu.number}</span>

@@ -10,10 +10,10 @@ export default function Stats() {
     <>
       {/* Testimonial section */}
       <section className="feedback" id="testimonials">
-        <div className="feedback-inner">
+        <div className="feedback-inner reveal-up" data-reveal="" data-delay="0">
           <div className="feedback-top">
-            <div className="feedback-label">CLIENT FEEDBACK</div>
-            <div className="feedback-deco-cross">
+            <div className="feedback-label reveal-left" data-reveal="" data-delay="100">CLIENT FEEDBACK</div>
+            <div className="feedback-deco-cross reveal-cross" data-reveal="" data-delay="200">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <path d="M20 0L23 17L40 20L23 23L20 40L17 23L0 20L17 17Z" fill="black" />
               </svg>
@@ -21,10 +21,10 @@ export default function Stats() {
           </div>
           <div className="feedback-body">
             <div className="feedback-text-side">
-              <div className="feedback-quote">
-                "Taxil has a great eye for detail and delivered a premium placement website for us. Truly professional and creative."
+              <div className="feedback-quote reveal-up" data-reveal="" data-delay="100">
+                &ldquo;Taxil has a great eye for detail and delivered a premium placement website for us. Truly professional and creative.&rdquo;
               </div>
-              <div className="feedback-author">
+              <div className="feedback-author reveal-left" data-reveal="" data-delay="250">
                 <strong>RedSky Team</strong>
                 <span>CEO, RedSky Placement</span>
               </div>
@@ -47,7 +47,7 @@ export default function Stats() {
       <section className="stats">
         <div className="stats-grid">
           {stats.map((stat, i) => (
-            <div key={i} className="stat-item">
+            <div key={i} className="stat-item reveal-scale-up" data-reveal="" data-delay={String(i * 150)}>
               <div className="stat-icon">
                 {i === 0 && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,6 +62,7 @@ export default function Stats() {
                     <circle cx="9" cy="7" r="4" />
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    <path d="M12 2l1 2.5L12 6l-1-1.5z" />
                   </svg>
                 )}
                 {i === 2 && (

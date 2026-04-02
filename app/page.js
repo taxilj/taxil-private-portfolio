@@ -7,10 +7,12 @@ import Projects from '@/components/Projects'
 import Stats from '@/components/Stats'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import Animations from '@/components/Animations'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <Animations />
       <Navbar />
       <Hero />
 

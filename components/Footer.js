@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer-new">
+    <footer className="footer-new reveal-fade" data-reveal="" data-delay="0">
       <div className="footer-deco">
         <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
           <path d="M20 0L23 17L40 20L23 23L20 40L17 23L0 20L17 17Z" fill="black" />

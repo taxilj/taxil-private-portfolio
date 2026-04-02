@@ -22,6 +22,24 @@ export default function Experience() {
 
   return (
     <section className="experience" id="experience">
+      {/* Decorative sun icon */}
+      <div className="exp-icon-sun reveal-spin" data-reveal="" data-delay="0">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="1.5" fill="black" />
+          {Array.from({ length: 24 }, (_, i) => (
+            <line
+              key={i}
+              x1="50" y1="50" x2="50" y2="20"
+              stroke="black" strokeWidth="0.5"
+              transform={`rotate(${i * 15} 50 50)`}
+              opacity="0.3"
+            />
+          ))}
+          <circle cx="50" cy="50" r="8" stroke="black" strokeWidth="0.5" strokeDasharray="1 2" />
+          <circle cx="50" cy="50" r="15" stroke="black" strokeWidth="0.5" opacity="0.1" />
+        </svg>
+      </div>
+
       {/* Decorative stripes */}
       <div className="exp-icon-stripes">
         <svg width="80" height="80" viewBox="0 0 100 100">
@@ -42,25 +60,7 @@ export default function Experience() {
         </svg>
       </div>
 
-      {/* Decorative sun icon */}
-      <div className="exp-icon-sun">
-        <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="1.5" fill="black" />
-          {Array.from({ length: 24 }, (_, i) => (
-            <line
-              key={i}
-              x1="50" y1="50" x2="50" y2="20"
-              stroke="black" strokeWidth="0.5"
-              transform={`rotate(${i * 15} 50 50)`}
-              opacity="0.3"
-            />
-          ))}
-          <circle cx="50" cy="50" r="8" stroke="black" strokeWidth="0.5" strokeDasharray="1 2" />
-          <circle cx="50" cy="50" r="15" stroke="black" strokeWidth="0.5" opacity="0.1" />
-        </svg>
-      </div>
-
-      <div className="exp-header">
+      <div className="exp-header reveal-up" data-reveal="" data-delay="0">
         <h2 className="section-title">EXPERIENCE</h2>
         <p className="section-desc">
           Practical experience building real-world projects and professional solutions.
@@ -69,7 +69,7 @@ export default function Experience() {
 
       <div className="exp-list">
         {experiences.map((exp, i) => (
-          <div key={i} className={`exp-item ${i === 0 ? 'active' : ''}`}>
+          <div key={i} className={`exp-item ${i === 0 ? 'active' : ''} reveal-left-item`} data-reveal="" data-delay={String(i * 200)}>
             <div className="exp-left">
               <div className="exp-num-box">
                 <span>{exp.number}</span>

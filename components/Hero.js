@@ -21,19 +21,19 @@ export default function Hero() {
 
       {/* Left content */}
       <div className="hero-left">
-        <div className="hero-emoji">👋</div>
+        <div className="hero-emoji reveal-rotate" data-hero="200">👋</div>
 
-        <h1>
-          Hello! <strong>I'm Taxil</strong>
+        <h1 className="reveal-up" data-hero="400">
+          Hello! <strong>I&apos;m Taxil</strong>
         </h1>
 
-        <div className="hero-subtitle">
+        <div className="hero-subtitle reveal-left" data-hero="600">
           <span className="subtitle-dash">————</span>
           Full Stack Developer &amp; Vibe Coder
         </div>
 
-        <p className="hero-desc">
-          Hello! I'm Taxil. I'm a <strong>Next.js developer</strong>, <strong>WordPress expert</strong>,{' '}
+        <p className="hero-desc reveal-up" data-hero="800">
+          Hello! I&apos;m Taxil. I&apos;m a <strong>Next.js developer</strong>, <strong>WordPress expert</strong>,{' '}
           <strong>prompt engineer</strong> &amp; <strong>vibe coder</strong> — I build fast, beautiful, AI-powered
           digital products.
         </p>
@@ -43,23 +43,23 @@ export default function Hero() {
             'Next.js & WordPress — full websites from scratch',
             'Prompt Engineering & AI-powered workflows',
             'Vibe Coding — rapid, creative, functional builds',
-          ].map((item) => (
-            <li key={item}>{item}</li>
+          ].map((item, i) => (
+            <li key={item} className="reveal-check" data-hero={String(1000 + i * 150)}>{item}</li>
           ))}
         </ul>
 
-        <div className="hero-btns">
+        <div className="hero-btns reveal-up" data-hero="1500">
           <a href="#contact" className="btn-primary">
-            Let's Talk
+            Let&apos;s Talk
           </a>
-          <a href="/resume.pdf" download className="btn-download">
+          <a href="/projects/resume.pdf" download className="btn-download">
             Download CV ↓
           </a>
         </div>
       </div>
 
       {/* Right - Photo */}
-      <div className="hero-right">
+      <div className="hero-right reveal-right" data-hero="600">
         <div className="hero-img-container">
           <img
             src="https://madhu-portfolio-sigma.vercel.app/_next/image?url=%2Fhero-photo.jpg&w=1080&q=75"
@@ -69,7 +69,7 @@ export default function Hero() {
             width={500}
             height={600}
           />
-          <div className="hero-badge-hello">
+          <div className="hero-badge-hello reveal-bounce" data-hero="1200">
             <span>Hello</span>
           </div>
           <div className="bg-shape-squiggly">
